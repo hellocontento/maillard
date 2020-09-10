@@ -2,9 +2,12 @@
   "name": "maillard",
   "version": "0.0.1",
   "description": "funky name for just-add-water toasts",
-  "main": "index.js",
+  "main": "dist/maillard.js",
+  "module": "dist/maillard.esm.js",
+  "browser": "dist/maillard.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,19 @@
   "bugs": {
     "url": "https://github.com/futurepastori/maillard/issues"
   },
-  "homepage": "https://github.com/futurepastori/maillard#readme"
+  "homepage": "https://github.com/futurepastori/maillard#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "rollup": "^2.26.11"
+  },
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "babel": "^6.23.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
