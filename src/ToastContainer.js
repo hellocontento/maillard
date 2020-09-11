@@ -7,7 +7,7 @@ function ToastContainer() {
 
   return (
     <div>
-      {toasts.map(toast => <ToastBody id={toast.id} key={toast.id} dispatch={dispatch} />)}
+      {toasts.map(toast => <ToastBody text={toast.text} id={toast.id} key={toast.id} dispatch={dispatch} />)}
     </div>
   );
 }
