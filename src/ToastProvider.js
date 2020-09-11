@@ -1,10 +1,19 @@
-import React, { useReducer } from "react";
-import toastReducer from "./reducer";
+import React, { createContext, useReducer } from "react";
 
-export const ToastContext = React.createContext();
+const ToastContext = createContext();
 
-export function ToastProvider({ children }) {
-  const reducer = useReducer(toastReducer, []);
+const toastReducer = (state, action) => {
+  const { payload, type } = action
+  switch (type) {
+    case 'ADD':
+      return [...state, payload];
+    case 'REMOVE':
+      return state.filter(toast => payload.id !== toast.id)
+  }
+}
+
+function ToastProvider({ children }) {
+  const reducer = useReducer(toastReducer, [])
 
   return (
     <ToastContext.Provider value={reducer}>
@@ -12,3 +21,6 @@ export function ToastProvider({ children }) {
     </ToastContext.Provider>
   );
 }
+
+export { ToastContext };
+export default ToastProvider;
