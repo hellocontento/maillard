@@ -1,7 +1,7 @@
 {
-  "name": "maillard",
+  "name": "@hellocontento/contento",
   "version": "0.0.1",
-  "description": "funky name for just-add-water toasts",
+  "description": "really simple toast notifications for react",
   "main": "dist/maillard.js",
   "module": "dist/maillard.esm.js",
   "browser": "dist/maillard.umd.js",
@@ -11,14 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/futurepastori/maillard.git"
+    "url": "git+https://github.com/hellocontento/maillard.git"
   },
-  "author": "Victor Ramirez",
+  "author": "Contento",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/futurepastori/maillard/issues"
+    "url": "https://github.com/hellocontento/maillard/issues"
   },
-  "homepage": "https://github.com/futurepastori/maillard#readme",
+  "homepage": "https://github.com/hellocontento/maillard#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
