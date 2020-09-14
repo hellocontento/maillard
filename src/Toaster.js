@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Toast from './Toast';
 import { ToastContext } from './ToastProvider';
 
-const StyledContainer = styled.div`
+const StyledToaster = styled.div`
   bottom: 24px;
   left: 24px;
   position: fixed;
@@ -14,7 +14,7 @@ function Toaster() {
   const [toasts, dispatch] = useContext(ToastContext);
 
   return (
-    <StyledContainer>
+    <StyledToaster>
       {toasts.map((toast) => (
         <Toast
           text={toast.text}
@@ -25,7 +25,7 @@ function Toaster() {
           dispatch={dispatch}
         />
       ))}
-    </StyledContainer>
+    </StyledToaster>
   );
 }
 

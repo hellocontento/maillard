@@ -8,15 +8,14 @@ const StyledToast = styled.div`
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(51, 51, 51, .25);
   box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  margin-top: 8px;
   max-width: 408px;
   min-width: 236px;
+  opacity: ${(props) => (props.hovered ? '.75' : '1')};
   padding: 10px 16px;
-  margin: 8px 0 0;
-  cursor: pointer;
-  transition: opacity .08s;
-  display: flex;
-  flex-direction: row;
-  opacity: ${(props) => (props.hovered ? '.7' : '1')};
+  transition: opacity .1s;
 `;
 const ToastContainer = styled.div`
   align-items: center;
@@ -33,31 +32,30 @@ const ToastIcon = styled.i`
   background-position: ${(props) => ((props.icon === 'error') ? 'left' : 'right')};
 `;
 const ToastContent = styled.p`
-  color: #ffffff;
+  color: white;
   margin: 0;
 `;
 const ToastButton = styled.button`
-  color: #ffffff;
-  opacity: .60;
-  margin: 0 0 0 16px;
-  padding: 6px 16px;
-  letter-spacing: -0.32px;
-  font-weight: 700;
-  line-height: 1;
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-  transition: .1s;
-  cursor: pointer;
+  background-color: rgba(235, 235, 245, 0);
   border-radius: 4px;
-
+  border: none;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: -.32px;
+  line-height: 1;
+  margin-left: 16px;
+  opacity: .6;
+  outline: none;
+  padding: 6px 16px;
+  transition: .1s;
   &:hover {
     opacity: 1;
     background-color: rgba(235, 235, 245, 0.13);
   }
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #ffffff;
+    box-shadow: 0 0 0 2px white;
   }
 `;
 
