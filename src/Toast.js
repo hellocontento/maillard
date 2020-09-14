@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import icons from './icons.svg';
 
 const StyledToast = styled.div`
-  background-color: rgb(51, 51, 51);
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(51, 51, 51, .25);
   box-sizing: border-box;
@@ -21,7 +20,7 @@ const ToastContainer = styled.div`
   align-items: center;
   display: flex;
   min-height: 36px;
-  flex: 1;
+  width: 100%;
 `;
 const ToastIcon = styled.i`
   width: 24px;

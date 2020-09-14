@@ -4,17 +4,20 @@ import Toast from './Toast';
 import { ToastContext } from './ToastProvider';
 
 const StyledToaster = styled.div`
-  bottom: 24px;
-  left: 24px;
   position: fixed;
   z-index: 999;
+  ${(props) => (props.options.yPos ?? 'bottom')}: 24px;
+  ${(props) => (props.options.xPos ?? 'left')}: 24px;
+  & > * {
+    background-color: ${(props) => (props.options.bgColor ?? 'rgb(51, 51, 51)')};
+  }
 `;
 
-function Toaster() {
+function Toaster({ options }) {
   const [toasts, dispatch] = useContext(ToastContext);
 
   return (
-    <StyledToaster>
+    <StyledToaster options={options}>
       {toasts.map((toast) => (
         <Toast
           text={toast.text}
