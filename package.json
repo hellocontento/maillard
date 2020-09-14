@@ -1,6 +1,6 @@
 {
   "name": "@hellocontento/maillard",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "really simple toast notifications for react",
   "main": "dist/maillard.js",
   "scripts": {
