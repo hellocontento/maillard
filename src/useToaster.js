@@ -1,26 +1,22 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 import { ToastContext } from './ToastProvider';
 
-const useToaster = (
-  style = "info",
-  text = "Ping!",
-  button = null,
-) => {
+const useToaster = () => {
   const [, dispatch] = useContext(ToastContext);
 
-  const addToast = () => {
+  const addToast = (text = 'Ping!', type = 'info', button = null) => {
     dispatch({
       type: 'ADD',
       payload: {
-        id: +new Date,
-        style,
+        id: +new Date(),
+        type,
         text,
-        button
-      }
-    })
-  }
+        button,
+      },
+    });
+  };
 
   return addToast;
-}
+};
 
 export default useToaster;

@@ -1,3 +1,3 @@
-export {default as ToastContainer} from './ToastContainer';
-export {default as ToastProvider} from './ToastProvider';
-export {default as useToaster} from './useToaster';
+export { default as Toaster } from './Toaster';
+export { default as ToastProvider } from './ToastProvider';
+export { default as useToaster } from './useToaster';
