@@ -13,7 +13,7 @@ const StyledToaster = styled.div`
   }
 `;
 
-function Toaster({ options }) {
+function Toaster({ options = {} }) {
   const [toasts, dispatch] = useContext(ToastContext);
 
   return (
