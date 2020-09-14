@@ -3,8 +3,6 @@
   "version": "1.0.4",
   "description": "really simple toast notifications for react",
   "main": "dist/maillard.js",
-  "module": "dist/maillard.esm.js",
-  "browser": "dist/maillard.umd.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w"

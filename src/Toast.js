@@ -33,6 +33,7 @@ const ToastIcon = styled.i`
 const ToastContent = styled.p`
   color: white;
   margin: 0;
+  user-select: none;
 `;
 const ToastButton = styled.button`
   background-color: rgba(235, 235, 245, 0);
@@ -41,7 +42,7 @@ const ToastButton = styled.button`
   box-shadow: none;
   color: white;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -.32px;
   line-height: 1;
   margin-left: 16px;
@@ -90,7 +91,7 @@ function Toast({
     <StyledToast hovered={isHovered}>
       <ToastContainer
         onClick={removeToast}
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseOver={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {type !== 'info' && <ToastIcon icon={type} bgImg={icons} />}
