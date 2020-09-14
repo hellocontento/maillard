@@ -11,11 +11,13 @@ export default [
     input: 'src/index.js',
     entry: 'src/entry.js',
     external: ['styled-components'],
-    output: {
-      name: 'maillard',
-      file: pkg.browser,
-      format: 'umd',
-    },
+    output: [{
+      file: pkg.main,
+      format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
+      strict: false,
+    }],
     plugins: [
       resolver(),
       babel({

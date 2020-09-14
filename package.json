@@ -9,6 +9,9 @@
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hellocontento/maillard.git"
