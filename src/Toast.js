@@ -65,13 +65,14 @@ function Toast({
   type,
   text,
   button,
+  timeout,
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => {
       dispatch({ type: 'REMOVE', payload: { id } });
-    }, 10000);
+    }, timeout || 5000);
 
     return () => clearTimeout(t);
   }, []);

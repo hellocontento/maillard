@@ -25,6 +25,7 @@ function Toaster({ options = {} }) {
           key={toast.id}
           type={toast.type}
           button={toast.button}
+          timeout={options.timeout}
           dispatch={dispatch}
         />
       ))}
