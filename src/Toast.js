@@ -24,6 +24,7 @@ const ToastContainer = styled.div`
 `;
 const ToastIcon = styled.i`
   width: 24px;
+  min-width: 24px;
   height: 24px;
   border-radius: 12px;
   margin: 0 10px 0 0;
