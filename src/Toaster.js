@@ -38,7 +38,7 @@ function Toaster({ options = {} }) {
   const [toasts, dispatch] = useContext(ToastContext);
 
   return (
-    <StyledToaster options={options} id={options.position}>
+    <StyledToaster options={options}>
       {toasts.map((toast) => (
         <Toast
           text={toast.text}
