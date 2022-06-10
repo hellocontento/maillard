@@ -5,7 +5,7 @@ const useToaster = () => {
   const [, dispatch] = useContext(ToastContext);
 
   const addToast = useCallback(
-    (text = "Ping!", type = "info", button = null, position = null) => {
+    (text = "Ping!", type = "info", button = null) => {
       dispatch({
         type: "ADD",
         payload: {

@@ -8,6 +8,8 @@ const StyledToaster = styled.div`
   z-index: 999;
 
   ${(props) => {
+    console.log("hey world");
+
     switch (props.options.position) {
       case "bottom-center":
         return css`
@@ -36,8 +38,10 @@ const StyledToaster = styled.div`
 function Toaster({ options = {} }) {
   const [toasts, dispatch] = useContext(ToastContext);
 
+  console.log(options);
+
   return (
-    <StyledToaster options={options}>
+    <StyledToaster options={options} id={options.position}>
       {toasts.map((toast) => (
         <Toast
           text={toast.text}
